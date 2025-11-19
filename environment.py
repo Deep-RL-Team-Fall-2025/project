@@ -95,7 +95,7 @@ class Overcooked():
         action_2 = self.action_map[action_player_2]
         next_state, reward, done, info = self.env.step((action_1, action_2))
         next_state = self._preprocess_state(next_state)
-        return next_state, reward, done, info
+        return next_state, reward, done, False, info
 
 def main():
     # Initialize the environment
